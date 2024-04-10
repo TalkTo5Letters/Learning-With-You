@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 438: expected 'label_name' not found.
-    jump "Good_End"
-        ^
-
-File "game/script.rpy", line 440: expected 'label_name' not found.
-    jump "Bad_End"
-        ^
-
-File "game/script.rpy", line 450: expected 'label_name' not found.
-    jump "End"
-        ^
-
-File "game/script.rpy", line 459: expected 'label_name' not found.
-    jump "End" 
-        ^
+File "game/script.rpy", line 202: play requires a channel
+    play "bell.mp3" fadein 1.0 volume 0.5
+         ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Wed Apr 10 23:14:21 2024
+Thu Apr 11 02:24:17 2024

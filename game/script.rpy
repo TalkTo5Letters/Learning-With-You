@@ -146,20 +146,24 @@ label start:
     Narrate "No matter what happens it just keeps pushing on. God, please slow down a bit eh? I'm trying so hard to keep up, you know?"
     Narrate "Finally, I open the door to our classroom- And I was greeted with… {p} —Silence."
     scene school classroom
-    show akari surprised at center
+    show akari headscatch_1 at center
     Akari "{i}Wha?!{/i}"
     Narrate "I naturally made my way towards my friends who were uncharacteristically studying their notes."
+    show akari boust at center
     Narrate "Good morning everyone! So, what's up? Why are you guys studying your notes? Did hell freeze over or something?"
-    show mio at right
+    show akari eyebrow_raise at center
     Friend1 "Ah- Akarin! Did you not know?"
     Akari "Hmm? Know what?"
     Friend1 "We have an exam today you know!"
+    show akari shocked
+    stop music
     Narrate "..."
+    play sound "boom.mp3"
     Akari "It's over..."
-    with dissolve
+    with fade
 
 label tutorial_question_1:
-    play music "comedy.mp3" loop
+    play music "huh.mp3" loop
     scene bg desk
     define question_index = renpy.random.randint(0, 4)
     call screen show_question_menu(question_index)
@@ -194,24 +198,23 @@ label tutorial_question_1:
 label end_of_exam:
     scene school classroom
     Narrate "After multiple hours of suffering, the loud bell outside rang."
-    show akari relief at center
+    stop music fadeout 1.0
+    play sound "bell.mp3" fadein 1.0 volume 0.5
+    show akari sigh at center
     Akari "It's over..."
-    show mio at right
+    stop sound fadeout 0.5
+    play music "comedy.mp3"
     Friend1 "Akarin… you really gotta pay more attention in school. Did you not check the class group chat?"
+    show akari crying_1 at center
     Akari "I didn't have the time to check yesterday…"
     Friend1 "Sigh* Let me guess, your siblings again?"
+    show akari crying at center
     Akari "Yeah, Dad’s on a business trip and mom got home late, I had to take care of them…"
     Narrate "It was a hopeless situation, but I understood our struggles so I didn't complain."
     hide akari
-    show mio at center
     Friend1 "I wonder how bad your grades are at this point?  We don’t study much but we try to keep up you know?"
-    show friend2 at left
     Friend2 "Yeah, I’m kinda worried about you now, Akari…"
-    show friend3 at right
     Friend3 "Me too…"
-    hide mio 
-    hide friend2
-    hide friend3
     Narrate "Suddenly the school intercom rang"
     School "Akari from Class 1-B, please come to the staff room"
     Friend1 "...Maybe it really is over for you this time"
