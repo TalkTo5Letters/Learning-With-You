@@ -175,6 +175,8 @@ label meeting_at_ofice:
     Akari "Um! I’m Akari from Class 1-B!"
     Sensei "Oh, Akari-san, please come in."
     Akari "Yes!"
+    
+    scene school office
     Narrate "I replied like a soldier to the person on the other side of the door before entering. I took a look around the room and found 2 people waiting inside."
     Narrate "Our classroom advisor, sensei, sat in the rightmost cubicle, the nearest one to the door, and right beside her, a certain girl stood."
     Sensei "Akari, can you come closer to me please, we need to talk about our grades."
@@ -300,6 +302,7 @@ label restaurant_test_exam:
         "f(x) = 6x^2 + 1": ["6x", "3x", "6", "12x", "12x"],
         "f(x) = 2x^3 + 1": ["6x^2", "3x", "6", "12", "6x^2"]
     }
+
     scene restaurant
 
     Narrate "I nervously handed the paper to Harumi who was currently studying on the other side of the table. I had taken so long to complete the example answer sheet she gave me that she eventually went on to do something else instead.. I feel so bad... "
@@ -315,6 +318,8 @@ label restaurant_test_exam:
     Narrate "Deciding on giving her some alone time, I waited patiently, simply checking the contents of my paper, seeing what i did wrong and what i should've done. "
     Narrate "Time passed quickly, and before i knew it, it has been 15 minutes since she went to the restroom. Worried, i finally stood up from my chair and approached the restroom stall. "
     Narrate"There i could here someone familiar talking. I slowly opened the door and was faced with a surprising situation. Something nobody would ever expect of the gentle, kind and saint-like harumi-"
+
+    scene bathroom
     Harumi "What even was that! How can someone be so dull witted! It doesn't make sense! I thought humans are all supposed to have some kind of intelligence, but to think that she couldn't even answer the common sense questions?!" 
     Narrate "A shocking scene was presented to me on the other side of the door. Harumi, throwing out harsh words as if they were nothing. "
     Harumi "How does one not know what's heavier, a kilogram of steel or a kilogram of feathers? It's right there in the question! They're the same! How can someone be so worthless!" 
@@ -334,6 +339,8 @@ label restaurant_test_exam:
     Akari "...I shall do what you ask" 
     Harumi "Good, sigh*. I apologise for what you've witnessed, Akarin-san. I believe it is the best interest of both parties that we finish up for the day here. We will meet again after class in this restaurant to continue your studying, understood?" 
     Narrate "Harumi continued as if the whole ordeal that happened just a few seconds ago did not happen."
+
+    scene restaurant
     Akari "You... you're still willing to teach me?" 
     Harumi "Of course, it was the request of sensei after all. And I never back down on the things i accepted."
     Narrate "Finally, she started towards the exit of the restaurant with me following closely. "
@@ -344,6 +351,9 @@ label restaurant_test_exam:
     Harumi "Well, let me reintroduce myself, my name is Harumi, and although you've discovered the real me, make no mistake, I will make you pass your exam. Please don't be late for tomorrow."  
     Narrate "She continues- now with her seiso voice- "
     Harumi "Well then, thank you for the pleasant afternoon and for keeping me company. We shall start our proper lessons tomorrow. I look forward to meeting you again Akari-san, Farewell."
+
+
+label end_exam:
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
