@@ -1,11 +1,11 @@
-2024-04-10 13:56:27 UTC
+2024-04-10 14:33:42 UTC
 Linux-6.8.4-arch1-1-x86_64-with-glibc2.39
 Ren'Py 8.2.1.24030407
 
 Early init took 0.07s
 Loading error handling took 0.04s
-Loading script took 0.20s
-Loading save slot metadata took 0.04s
+Loading script took 0.22s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.05s
 Loading analysis data took 0.02s
@@ -20,7 +20,7 @@ Initial gc took 0.04s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
@@ -29,7 +29,7 @@ Prepare screens took 0.09s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.04s
 Running _start took 0.00s
-Interface start took 0.16s
+Interface start took 0.18s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 2560, 1440)
