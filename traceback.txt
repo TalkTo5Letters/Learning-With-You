@@ -1,28 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 276, in script
-    $ easy_questions.pop(list(easy_questions.keys())[question_index])
-  File "game/script.rpy", line 276, in <module>
-    $ easy_questions.pop(list(easy_questions.keys())[question_index])
-IndexError: list index out of range
+  File "game/script.rpy", line 503, in script
+    play musc "bnight.mp3"
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+Exception: Audio channel 'musc' is unknown.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 276, in script
-    $ easy_questions.pop(list(easy_questions.keys())[question_index])
-  File "/home/quertzy/Downloads/renpy-8.2.1-sdk/renpy/ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/quertzy/Downloads/renpy-8.2.1-sdk/renpy/python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 276, in <module>
-    $ easy_questions.pop(list(easy_questions.keys())[question_index])
-  File "/home/quertzy/Downloads/renpy-8.2.1-sdk/renpy/revertable.py", line 221, in __getitem__
-    rv = list.__getitem__(self, index)
-IndexError: list index out of range
+  File "game/script.rpy", line 503, in script
+    play musc "bnight.mp3"
+  File "C:\Users\Ironarmor64\Desktop\renpy-8.2.1-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Users\Ironarmor64\Desktop\renpy-8.2.1-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Ironarmor64\Desktop\renpy-8.2.1-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "C:\Users\Ironarmor64\Desktop\renpy-8.2.1-sdk\renpy\audio\music.py", line 103, in play
+    c = get_channel(channel)
+  File "C:\Users\Ironarmor64\Desktop\renpy-8.2.1-sdk\renpy\audio\audio.py", line 928, in get_channel
+    raise Exception("Audio channel %r is unknown." % name)
+Exception: Audio channel 'musc' is unknown.
 
-Linux-6.8.4-arch1-1-x86_64-with-glibc2.39 x86_64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.1.24030407
 Learning With You 1.0
-Wed Apr 10 21:55:53 2024
+Thu Apr 11 22:46:57 2024

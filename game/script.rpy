@@ -146,20 +146,24 @@ label start:
     Narrate "No matter what happens it just keeps pushing on. God, please slow down a bit eh? I'm trying so hard to keep up, you know?"
     Narrate "Finally, I open the door to our classroom- And I was greeted with… {p} —Silence."
     scene school classroom
-    show akari surprised at center
+    show akari headscatch_1 at center
     Akari "{i}Wha?!{/i}"
     Narrate "I naturally made my way towards my friends who were uncharacteristically studying their notes."
+    show akari boust at center
     Narrate "Good morning everyone! So, what's up? Why are you guys studying your notes? Did hell freeze over or something?"
-    show mio at right
+    show akari eyebrow_raise at center
     Friend1 "Ah- Akarin! Did you not know?"
     Akari "Hmm? Know what?"
     Friend1 "We have an exam today you know!"
+    show akari shocked
+    stop music
     Narrate "..."
+    play sound "boom.mp3"
     Akari "It's over..."
-    with dissolve
+    with fade
 
 label tutorial_question_1:
-    play music "comedy.mp3" loop
+    play music "huh.mp3" loop
     scene bg desk
     define question_index = renpy.random.randint(0, 4)
     call screen show_question_menu(question_index)
@@ -194,26 +198,26 @@ label tutorial_question_1:
 label end_of_exam:
     scene school classroom
     Narrate "After multiple hours of suffering, the loud bell outside rang."
-    show akari relief at center
+    stop music fadeout 1.0
+    play sound "bell.mp3" fadein 1.0 volume 0.5
+    show akari sigh at center
     Akari "It's over..."
-    show mio at right
+    stop sound fadeout 0.5
+    play music "comedy.mp3"
     Friend1 "Akarin… you really gotta pay more attention in school. Did you not check the class group chat?"
+    show akari crying_1 at center
     Akari "I didn't have the time to check yesterday…"
     Friend1 "Sigh* Let me guess, your siblings again?"
+    show akari crying at center
     Akari "Yeah, Dad’s on a business trip and mom got home late, I had to take care of them…"
     Narrate "It was a hopeless situation, but I understood our struggles so I didn't complain."
-    hide akari
-    show mio at center
     Friend1 "I wonder how bad your grades are at this point?  We don’t study much but we try to keep up you know?"
-    show friend2 at left
+    show akari crying_1 at center
     Friend2 "Yeah, I’m kinda worried about you now, Akari…"
-    show friend3 at right
     Friend3 "Me too…"
-    hide mio 
-    hide friend2
-    hide friend3
     Narrate "Suddenly the school intercom rang"
     School "Akari from Class 1-B, please come to the staff room"
+    show akari shocked at center
     Friend1 "...Maybe it really is over for you this time"
     Akari "AAHHHHHHHHHH"
 
@@ -227,6 +231,7 @@ label meeting_at_ofice:
     Akari "Yes!"
     
     scene school office
+    play music "huh.mp3"
     Narrate "I replied like a soldier to the person on the other side of the door before entering. I took a look around the room and found 2 people waiting inside."
     Narrate "Our classroom advisor, sensei, sat in the rightmost cubicle, the nearest one to the door, and right beside her, a certain girl stood."
     Sensei "Akari, can you come closer to me please, we need to talk about our grades."
@@ -235,44 +240,64 @@ label meeting_at_ofice:
     Akari "Yes ma’am."
     Narrate "As instructed, I got closer to the teacher and the girl. The teacher got into the matter at hand immediately."
     Sensei "Akari-san, as of right now, you’re failing the class."
-    show akari surprised at left
+    show akari crying_1 at left
     Akari "Eck!"
     Sensei "I’ve heard of your current circumstances. You’ve always been tired during our classes, and there’s been reports and complaints from other teachers about you sleeping in their class, how do you plead?"
-    show akari at left
+    show akari nervous at left
     Akari "Guilty ma’am, I apologise"
     Sensei "I see… I wasn’t expecting such a straightforward answer from you Akari-san."
     Akari "There is simply no excuse for my actions, so I don't really have a choice…"
     Sensei "Well, considering how kind you are, I’m willing to give you another chance."
+    show akari sorry at center
     Akari "Really?"
     Sensei "Yes, let me explain. The biggest contributor to you failing the class were the exams you just took now. If you had passed, there wouldn't have been any problems, but that didn’t happen, did it now?" 
+   
     Sensei "That’s why, I’m willing to let you retake the exams. However, as of now, if you retake the exams, do you think you have the ability to pass?"
+    show akari sigh at center
     Akari "I don’t think so…"
     Sensei "Yes, that’s why, this girl right here will teach you some stuff before you retake the exams. Introduce yourself"  
-    show harumi at right
+    hide akari
+    show harumi subtle at right
     Narrate "I stared at the girl in question. The girl who can be called a true \"Yamato nadeshiko\". Her long, straight black hair, which glimmered due to the bright sunlight, swayed as breeze flowed through the room. "
+    show harumi innocent at right
     Narrate "A face so white and smooth that it can be compared to the best of pearls in the world and a head that is believed to be as wide as the great library of alexandria. That’s the type of girl Harumi is."
     Narrate "One of the most Popular girls in our school, Miyahira Harumi, also known as the gentle princess. Known because of her beauty and attitude, she also boasts the highest exam scores within the prefecture. Truly a perfect girl."
+    show akari shy at left
     Narrate "And now, our homeroom teacher is proposing that such a perfect girl teach me… Eh? Is this really fine? Did sensei get some blackmail material on her to persuade her to do this? Why me???"
     Harumi "Good afternoon, Akari-san. My name is Miyahira Harumi. It is a pleasure to meet you."
+    show akari neutral_smile at left
     Narrate "Harumi greeted, followed by a bow."
+    show akari shocked at center
     Akari "A-Ah. Likewise, my name is Akari… wait you already know! E-erm, I thank you in advance for your help, let’s get along" 
+    hide akari
+    show harumi innocent at center
     Narrate "Fumbling, I followed up with a bow too, but it doesn’t really fit me, does it now."
     Narrate "I looked towards Harumi again. Her refined movements truly makes her worthy of her title. Finally, the teacher interrupts our awkward situation-"
     Sensei "Akari-san, with this you should be able to catch up, right?"
+    hide harumi
+    show akari salute at center
     Akari "Of course ma’am!"
+    show akari salute_1 at center
     Sensei "Good, then, please prepare for your exam in 2 weeks. Harumi-san, please take care of Akari for me."
+    show akari salute at center
     Akari "Understood."
     Sensei "Well then kids, you can go now. See you in monday~" 
+    show akari neutral_clasp at left
     Akari "Yes, thank you ma’am.."
-    show harumi calm at right
+    show harumi innocent at right
     Harumi "Farewell…"
     Narrate "And with that, we left the room. I slowly turned my head towards Harumi."
-    show akari happy at left
+    show akari neutral_clasp_1 at left
     Akari "Please look after me for the upcoming two weeks together."
+    show harumi eye_twitch at right
     Harumi "Of course Akari-san. I look forward to our upcoming times together. Let us do our best together."
+    show akari sorry at left
     Akari "{i}Ahhh as expected, the almighty Harumi-sama is as gentle as ever. But huh… I thought I saw her cheeks twitch for a bit… {/i}"
-    show harumi annoyed at right
+    show harumi glare at right
     Harumi "{i}Tsk…{/i}"
+    hide harumi
+    stop music
+    show akari shocked at center
     Akari "{i}E? Ehhhhhh???{/i}"
 
 
@@ -285,9 +310,11 @@ label ActII:
     
 label inside_house:
     scene akarin house inside
-    show akari at center
+    show akari dead_eye at center
     Akari "I’m home~"
+    play music "bnight.mp3"
     Sister "Ah onee-chan! Welcome back~!"
+    hide akari
     Narrate "After a long day of unexpected events happening, like the test, getting called by the teacher, and having the opportunity for the one and only Harumi to tutor me in preparation for my retaking of exams, I finally got back home after my part time job."
     Akari "Is mom home yet?"
     Sister "Nope! She called us and said she'll be late for today too!"
@@ -303,40 +330,51 @@ label inside_house:
     Narrate "But she seemed irritated at the end... maybe I'm just overthiking it. Oh well, have to make sure I have enough energy for tomorrow. Time for sleep!"
    
     scene empty
+    stop music fadeout 3
     Narrate "And with that, the night skipped forward, and before I know it, Class was about to end."
     Narrate"{i}*Ding Dong Ding Dong{/i}"
-
+    play sound "bell.mp3" volume 0.1
     scene school classroom
-    show mio at left
     Friend1 "Yo, Akarin"
-    show akari at right
+    show akari dead_eye at right
+    stop sound fadeout 1
+    play music "convo.mp3"
     Akari "What's up?"
     Friend1 "Wanna hang out and stuff?"
+    show akari sorry at right
     Akari "Well..."
+    hide akari
     Narrate "I looked towards her back and noticed Harumi waiting outside our class. A commotion has already started as people wondered who Harumi could be waiting for in the class"
     Narrate "Noticing my shift of attention, Mio also looked outside the class, then back to me. Smirking."
     Friend1 "Hee~ Is that how it is? This is quite unexpected. You didn't tell us about this development yesterday you know?"
+    show akari irritated at center
     Akari "It's not like that... Sensei just asked her to help me study up for my make up exams"
     Friend1 "Heh. So, where are you guys going to study at?"
+    show akari eyebrow_raise at center
     Akari "I wonder."
+    hide akari
     Narrate "Perhaps losing her patience (Impossible), Harumi entered our class."
-    show harumi calm at center
+    show harumi innocent at center
     Harumi "May I borrow Akari-san? We have to study today."
     Friend1 "Sure!"
+    show akari shocked at left
     Akari "{i}Ehhhh{/i}"
+    hide akari
+    stop music fadeout 3
     Narrate "It seems like my school life is about to bevome become nosier."
-
+    hide harumi
+    with dissolve 
 
 label restaurant_test_exam:
     scene restaurant
-    show harumi calm at center
+    show harumi innocent at center
     Harumi "Before we start studying, do you mind taking a short test, Akari-san?"
-    show akari at center
+    show akari nervous at left
     Akari "No, not at all!"
     Narrate "Thus, hell began."
 
     scene paper
-    play music "comedy.mp3" loop
+    play music "huh.mp3" loop
     $ question_index = renpy.random.randint(0, 4)
     call screen show_question_menu_medium_scam(question_index)
     Akari "This is too hard!"
@@ -369,18 +407,24 @@ label restaurant_test_exam:
     }
 
     scene restaurant
-
     Narrate "I nervously handed the paper to Harumi who was currently studying on the other side of the table. I had taken so long to complete the example answer sheet she gave me that she eventually went on to do something else instead.. I feel so bad... "
+    show akari nervous at left
     Akari "Here's my paper madaam!" 
-    show harumi surprised at center
     Harumi "Oh... thanks for the hard work Akari-san. Please let me check your paper for a moment."
-    show harumi at center
+    show harumi innocent at center
     Akari "Of course!" 
+    stop music fadeout 5
+    hide akari
     Narrate "Slowly, Harumi checked the contents of my paper line by line. As she continued, the motion of her pen gradually slowed down, as her perfect straight lines became jagged as she progressed down the paper. By the end of it, it seemed like she was struggling to check as her pen was starting to shake..."
-    show harumi surprised at center
+    show harumi shock at center
+    show akari sorry at left
     Akari "Harumi-san, are you alright?"
+    show harumi subtle at center
     Harumi "Um... cough cough, of course. I apologize for the wait. Here is your paper. My I go to the restroom for a bit?" 
+    hide harumi
+    show akari salute at center
     Akari "Sure!"
+    hide akari
     Narrate "Harumi made her way to the bathroom, and I was left alone with my paper at hand. I checked my score and was surprised by it's contents. "
     Narrate"5. I had scored a measly five points out of the thirty total. To put it frankly, it was a disaster, no, a tragedy. A tragedy so drastic that it was able to put Harumi into panic. Perhaps the reason she went to the bathroom was because she doesn't know how to handle someone like me..."
     Narrate "Deciding on giving her some alone time, I waited patiently, simply checking the contents of my paper, seeing what I did wrong and what I should've done. "
@@ -388,48 +432,75 @@ label restaurant_test_exam:
     Narrate"There I could here someone familiar talking. I slowly opened the door and was faced with a surprising situation. Something nobody would ever expect of the gentle, kind and saint-like harumi-"
 
     scene bathroom
-    play music "unwelcome_school.mp3" loop
-    show harumi raging at center
+    play music "howthefuck.mp3" loop
+    show harumi meltdown at center
     Harumi "What even was that! How can someone be so dull witted! It doesn't make sense! I thought humans are all supposed to have some kind of intelligence, but to think that she couldn't even answer the common sense questions?!" 
     Narrate "A shocking scene was presented to me on the other side of the door. Harumi, throwing out harsh words as if they were nothing. "
+    show harumi meltdown at center
     Harumi "How does one not know what's heavier, a kilogram of steel or a kilogram of feathers? It's right there in the question! They're the same! How can someone be so worthless!" 
+    show akari shocked at left
     Akari "{i}*Goufh!{/i}"
+    show akari crying_1 at left
     Akari "{i}Harsh!{/i}" 
+    hide akari
+    show harumi meltdown at center
     Harumi "This is an impossible task... I thought it would be beneficial for me since it was sensei asking, but... Maybe this is punishment for being too popular?" 
+    show akari irritated at left
+    hide harumi
     Akari "{i}what's with her ego!?{/i}"
+    hide akari 
+    show harumi meltdown at center
     Harumi "No... I've never failed before... you can do this Harumi. Smile like you always do. No matter what happens, I--- ...eh?" 
+    stop music fadeout 3
     Narrate "It seems like she finally noticed that I was watching her whole rant, stopping dead on her tracks, the room became silent."
-    show harumi angry at center
+    play music "wellshit.mp3"
+    show harumi shock at center
     Harumi "You... did you see?" 
-    show akari scared at left
+    show akari shocked_1 at left
     Akari "Errr... yes?" 
+    show harumi serious at center
     Harumi "Did you hear everything?" 
+    show akari shocked at left
     Akari "Affirmative." 
+    show akari nervous at left
     Harumi "Then, do I need to tell more?"
+    show akari shy at left
     Akari "Tell me what?" 
+    show harumi glare at center
     Harumi "Do not speak of this event to anyone. The moment you do, I'll make sure you will regret it."
+    show akari salute at left
     Akari "...I shall do what you ask" 
+    hide harumi
+    stop music
     Harumi "Good, sigh*. I apologise for what you've witnessed, Akarin-san. I believe it is the best interest of both parties that we finish up for the day here. We will meet again after class in this restaurant to continue your studying, understood?" 
+    hide akari
     Narrate "Harumi continued as if the whole ordeal that happened just a few seconds ago did not happen."
 
     scene restaurant
     play music "main.mp3" loop
-    show akari at center
+    show akari shy at center
     Akari "You... you're still willing to teach me?" 
-    show harumi at right
+    show harumi innocent at right
     Harumi "Of course, it was the request of sensei after all. And I never back down on the things I accepted."
+    hide akari
+    hide harumi
     Narrate "Finally, she started towards the exit of the restaurant with me following closely. "
     Narrate "Of course we made sure to pick up our bags before leaving. But before Harumi left for good, she suddenly stops- "
+    show harumi subtle at right
     Harumi "Here's my LINE ID, it'd be easier to organize if we can talk online afterall, I'll keep my guard down on you since you already know anyway." 
     Narrate "Harumi then hands me a small piece of paper containing her contact information. "
+    show akari sorry at center
     Akari "Thank you..." 
+    show harumi innocent at right
     Harumi "Well, let me reintroduce myself, my name is Harumi, and although you've discovered the real me, make no mistake, I will make you pass your exam. Please don't be late for tomorrow."  
     Narrate "She continues- now with her seiso voice- "
     Harumi "Well then, thank you for the pleasant afternoon and for keeping me company. We shall start our proper lessons tomorrow. I look forward to meeting you again Akari-san, Farewell."
-
+    with dissolve 
+    stop music fadeout 3
 
 label end_exam:
     scene school classroom
+    play music "bnight.mp3"
     Narrate "Finally the day of my redemption has come!"
     Sensei "Alright class. You may start answering you papers... now!"
 
